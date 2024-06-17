@@ -22,7 +22,7 @@
                 class="color" 
                 :style="{ boxShadow: glowEffects['red'] ? '0 0 20px yellow' : 'none' }"
                 @click="setColor('red')"
-                src="src/assets/pictures/colorBTN/redBTN.svg"
+                src="../../src/assets/pictures/colorBTN/redBTN.svg"
                 alt="color"
               />
             </td>
@@ -31,7 +31,7 @@
                 class="color"
                 :style="{ boxShadow: glowEffects['brown'] ? '0 0 20px yellow' : 'none' }"
                 @click="setColor('brown')"
-                src="src/assets/pictures/colorBTN/brownBTN.svg"
+                src="../../src/assets/pictures/colorBTN/brownBTN.svg"
                 alt="color"
               />
             </td>
@@ -40,7 +40,7 @@
                 class="color"
                 :style="{ boxShadow: glowEffects['green'] ? '0 0 20px yellow' : 'none' }"
                 @click="setColor('green')"
-                src="src/assets/pictures/colorBTN/greenBTN.svg"
+                src="../../src/assets/pictures/colorBTN/greenBTN.svg"
                 alt="color"
               />
             </td>
@@ -49,7 +49,7 @@
                 class="color"
                 :style="{ boxShadow: glowEffects['lightblue'] ? '0 0 20px yellow' : 'none' }"
                 @click="setColor('lightblue')"
-                src="@/assets/pictures/colorBTN/lightblueBTN.svg"
+                src="../../src/assets/pictures/colorBTN/lightblueBTN.svg"
                 alt="color"
               />
             </td>
@@ -60,7 +60,7 @@
                 class="color"
                  :style="{ boxShadow: glowEffects['orange'] ? '0 0 20px yellow' : 'none' }"
                 @click="setColor('orange')"
-                src="@/assets/pictures/colorBTN/orangeBTN.svg"
+                src="../../src/assets/pictures/colorBTN/orangeBTN.svg"
                 alt="color"
               />
             </td>
@@ -69,7 +69,7 @@
                 class="color"
                 :style="{ boxShadow: glowEffects['yellow'] ? '0 0 20px yellow' : 'none' }"
                 @click="setColor('yellow')"
-                src="@/assets/pictures/colorBTN/yellowBTN.svg"
+                src="../../src/assets/pictures/colorBTN/yellowBTN.svg"
                 alt="color"
               />
             </td>
@@ -78,7 +78,7 @@
                 class="color"
                 :style="{ boxShadow: glowEffects['darkgreen'] ? '0 0 20px yellow' : 'none' }"
                 @click="setColor('darkgreen')"
-                src="@/assets/pictures/colorBTN/darkgreenBTN.svg"
+                src="../../src/assets/pictures/colorBTN/darkgreenBTN.svg"
                 alt="color"
               />
             </td>
@@ -87,7 +87,7 @@
                 class="color"
                  :style="{ boxShadow: glowEffects['blue'] ? '0 0 20px yellow' : 'none' }"
                 @click="setColor('blue')"
-                src="@/assets/pictures/colorBTN/blueBTN.svg"
+                src="../../src/assets/pictures/colorBTN/blueBTN.svg"
                 alt="color"
               />
             </td>
