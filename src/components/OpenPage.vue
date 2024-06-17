@@ -2,11 +2,11 @@
     <div>
         <div  v-if="!toShow">
             <div class="headline">לומדת פיצוץ מטאורים</div>
-            <img class="arrow" @click="next" src="@/assets/pictures/arrow.svg" alt="arrow"/>
+            <img class="arrow" @click="next" src="../../src/assets/pictures/arrow.svg" alt="arrow"/>
         </div>
 
         <div v-if="toShow" class="loading"> 
-            <img class="shhh-amongus" src="@/assets/pictures/shhh.svg" alt="shhh-amongus"/>
+            <img class="shhh-amongus" src="../../src/assets/pictures/shhh.svg" alt="shhh-amongus"/>
          </div>
     </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <div id="finish-page">
     <p class="title">כל הכבוד סיימת את הלומדה בהצלחה!!</p>
-    <img class="party" src="@/assets/pictures/party.svg" alt="party" />
+    <img class="party" src="../../src/assets/pictures/party.svg" alt="party" />
   </div>
 </template>
 

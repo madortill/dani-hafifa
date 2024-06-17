@@ -37,7 +37,7 @@
 import Intro from "./components/Intro.vue";
 import OpenPage from "./components/OpenPage.vue";
 import SpaceBackground from "./components/SpaceBackground.vue";
-import TheShip from "@/components/TheShip.vue";
+import TheShip from "./components/TheShip.vue";
 import Game from "./components/Game.vue";
 import FinishPage from "./components/FinishPage.vue";
 
@@ -122,17 +122,17 @@ export default {
 <style>
 @font-face {
   font-family: "BN Pinky";
-  src: url("@/assets/fonts/BN Pinky.ttf");
+  src: url("../src/assets/fonts/BN Pinky.ttf");
 }
 
 @font-face {
   font-family: "bn pixeliom";
-  src: url("@/assets/fonts/bn pixeliom.ttf");
+  src: url("../src/assets/fonts/bn pixeliom.ttf");
 }
 
 @font-face {
   font-family: "VCR_OSD_MONO";
-  src: url("@/assets/fonts/VCR_OSD_MONO.ttf");
+  src: url("../src/assets/fonts/VCR_OSD_MONO.ttf");
 }
 
 html,

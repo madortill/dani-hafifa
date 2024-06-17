@@ -1,7 +1,7 @@
 <template>
   <div id="what-is-a-meteor">
     <div class="space-right">
-      <img v-if="showCloseBtn" @click="close" class="close" src="@/assets/pictures/X.svg" alt="x"/>
+      <img v-if="showCloseBtn" @click="close" class="close" src="../../src/assets/pictures/X.svg" alt="x"/>
 <p class="headline">מהו אסטרואיד?</p>
     <p>
       יצור מרושע שמטרתו להשמיד את כדור הארץ ואנחנו בברוגז איתו ממש.

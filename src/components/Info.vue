@@ -1,9 +1,9 @@
 <template>
   <div id="info">
     <div class="space-right">
-          <img v-if="type === '0'" class="baby meteor" src="@/assets/pictures/meteor.svg" alt="meteor"/>
-    <img v-else-if="type === '1'" class="teenage meteor" src="@/assets/pictures/meteor.svg" alt="meteor"/>
-    <img  v-else-if="type === '2'" class="adult meteor" src="@/assets/pictures/meteor.svg" alt="meteor"/>
+          <img v-if="type === '0'" class="baby meteor" src="../../src/assets/pictures/meteor.svg" alt="meteor"/>
+    <img v-else-if="type === '1'" class="teenage meteor" src="../../src/assets/pictures/meteor.svg" alt="meteor"/>
+    <img  v-else-if="type === '2'" class="adult meteor" src="../../src/assets/pictures/meteor.svg" alt="meteor"/>
 <p class="headline">{{arr[type].Headline}}</p>
     <p class="information">
       {{arr[type].Text}}

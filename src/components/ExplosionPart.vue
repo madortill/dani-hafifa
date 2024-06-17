@@ -7,8 +7,8 @@
 תפקידכן הוא לכוון את משגר הפצצות לכיוון האסטרואיד לפי הקורדינאטות שקיבלתם מתחנת השיגור.
     </p>
 
-    <img src="@/assets/pictures/astroAmongUs.svg" alt="astroAmongUs" class="astroAmongUs" />
-    <img src="@/assets/pictures/rocket.svg" alt="rocket" class="rocket" />
+    <img src="../../src/assets/pictures/astroAmongUs.svg" alt="astroAmongUs" class="astroAmongUs" />
+    <img src="../../src/assets/pictures/rocket.svg" alt="rocket" class="rocket" />
     <button v-if="showBtn" :style="{'--chosen-color': theColor, color: theColor === 'yellow' ? 'black' : 'white'}" @click="toGame" class="continue-btn">בואי נתרגל</button>
     </div>
     

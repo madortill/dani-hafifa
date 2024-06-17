@@ -22,7 +22,7 @@
       <img
         class="arrow"
         @click="next"
-        src="@/assets/pictures/arrow.svg"
+        src="../../src/assets/pictures/arrow.svg"
         alt="arrow"
       />
     </div>
@@ -50,7 +50,7 @@
       <img
         class="explosion"
         v-if="showExplosion"
-        src="src/assets/pictures/explosion.gif"
+        src="../../src/assets/pictures/explosion.gif"
         alt="explosion"
       />
 
@@ -58,14 +58,14 @@
         <img
           v-for="i in 3"
           class="life"
-          src="@/assets/pictures/heart.svg"
+          src="../../src/assets/pictures/heart.svg"
           alt="heart"
           :key="i"
           :id="i"
         />
       </div>
       <div class="score-container">
-        <img class="trophy" src="src/assets/pictures/trophy.png" alt="trophy" />
+        <img class="trophy" src="../../src/assets/pictures/trophy.png" alt="trophy" />
         <p class="the-score">{{ score }} / 5</p>
       </div>
     </div>

@@ -118,7 +118,7 @@
       v-if="showArrow"
       class="arrow"
       @click="next"
-      src="@/assets/pictures/arrow.svg"
+      src="../../src/assets/pictures/arrow.svg"
       alt="arrow"
     />
   </div>
