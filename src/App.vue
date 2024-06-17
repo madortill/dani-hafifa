@@ -1,75 +1,157 @@
 <template>
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-      </div>
-
+  <div id="app">
+    <space-background v-if="showBG"></space-background>
+    <open-page v-if="pageNum === 0" @next="nextPage"></open-page>
+    <intro
+    :lightColor="lightColor"
+    :darkColor="darkColor"
+      @setTheColor="setChosenColor"
+      v-else-if="pageNum === 1"
+      @next="nextPage"
+    ></intro>
+    <the-ship
+    :lightColor="lightColor"
+    :darkColor="darkColor"
+      @toGame="nextPage"
+      :chosenColor="color"
+      v-else-if="pageNum === 2"
+    ></the-ship>
+    <game
+    :lightColor="lightColor"
+    :darkColor="darkColor"
+      @toUnshowBG="noBG"
+      @toshowBG="showTheBG"
+      :theColor="color"
+      @toFinishPage="nextPage"
+      v-else-if="pageNum === 3"
+    ></game>
+    <finish-page
+      @toFinishPage="nextPage"
+      v-else-if="pageNum === 4"
+    ></finish-page>
+    <div id="hide"></div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Intro from "./components/Intro.vue";
+import OpenPage from "./components/OpenPage.vue";
+import SpaceBackground from "./components/SpaceBackground.vue";
+import TheShip from "@/components/TheShip.vue";
+import Game from "./components/Game.vue";
+import FinishPage from "./components/FinishPage.vue";
+
+export default {
+  name: "app",
+  components: {
+    SpaceBackground,
+    OpenPage,
+    Intro,
+    TheShip,
+    Game,
+    FinishPage,
+  },
+  data() {
+    return {
+      pageNum: 0,
+      color: "red",
+      showBG: true,
+      darkColor: "#852631",
+      lightColor: "#eb432f",
+    };
+  },
+  methods: {
+    nextPage() {
+      this.pageNum++;
+    },
+
+    setChosenColor(chosen) {
+      this.color = chosen;
+      this.setUsedColors(chosen);
+    },
+
+
+    noBG() {
+      this.showBG = false;
+    },
+
+    showTheBG() {
+      this.showBG = true;
+    },
+
+      setUsedColors(theColor) {
+      switch (theColor) {
+        case "red":
+          this.lightColor = "#eb432f";
+          this.darkColor = "#852631";
+          break;
+        case "lightblue":
+          this.lightColor = "#38ffdd";
+          this.darkColor = "#35a7c0";
+          break;
+        case "blue":
+          this.lightColor = "#1125da";
+          this.darkColor = "#070b93";
+          break;
+        case "green":
+          this.lightColor = "#61ef00";
+          this.darkColor = "#2da82a";
+          break;
+        case "darkgreen":
+          this.lightColor = "#158231";
+          this.darkColor = "#115335";
+          break;
+        case "yellow":
+          this.lightColor = "#f3f658";
+          this.darkColor = "#c28722";
+          break;
+        case "brown":
+          this.lightColor = "#71491e";
+          this.darkColor = "#5e2615";
+          break;
+        case "orange":
+          this.lightColor = "#f07d0d";
+          this.darkColor = "#b43e15";
+          break;
+      }
+    },
+  },
+};
 </script>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+<style>
+@font-face {
+  font-family: "BN Pinky";
+  src: url("@/assets/fonts/BN Pinky.ttf");
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+@font-face {
+  font-family: "bn pixeliom";
+  src: url("@/assets/fonts/bn pixeliom.ttf");
 }
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+@font-face {
+  font-family: "VCR_OSD_MONO";
+  src: url("@/assets/fonts/VCR_OSD_MONO.ttf");
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
+html,
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: BN Pinky;
+  color: white;
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
+@media screen and (width> 770px) {
+  #hide {
+    display: block;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    position: absolute;
+    top: 0%;
   }
 }
 </style>
