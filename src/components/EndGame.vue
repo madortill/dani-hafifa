@@ -95,9 +95,9 @@ export default {
     theSound() {
       
       if (this.isWin) {
-        return "src/assets/audio/victory-sound.mp3";
+        return "../../src/assets/audio/victory-sound.mp3";
       } else {
-        return "src/assets/audio/defeat-sound.mp3";
+        return "../../src/assets/audio/defeat-sound.mp3";
       }
     },
   },
