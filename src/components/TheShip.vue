@@ -1,6 +1,6 @@
 <template>
   <div id="the-ship">
-    <img class="ship" src="src/assets/pictures/ship.svg" />
+    <img class="ship" src="../../src/assets/pictures/ship.svg" />
     <img id="player" class="player" :src="playerImageUrl" alt="player" />
 
 
